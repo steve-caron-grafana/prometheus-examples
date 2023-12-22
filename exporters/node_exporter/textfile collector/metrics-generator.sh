@@ -14,5 +14,4 @@ EOF
 
 # Rename the temporary file atomically.
 # This avoids the node exporter seeing half a file.
-mv "$TEXTFILE_COLLECTOR_DIR/hw-metrics.prom.$$" \
-  "$TEXTFILE_COLLECTOR_DIR/hw-metrics.prom"
+mv "$TEXTFILE_COLLECTOR_DIR/hw-metrics.prom.$$" "$TEXTFILE_COLLECTOR_DIR/hw-metrics.prom"
