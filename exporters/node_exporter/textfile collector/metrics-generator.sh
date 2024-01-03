@@ -6,6 +6,7 @@ TEXTFILE_COLLECTOR_DIR=/home/ubuntu/custom-prom-metrics
 # Write out metrics to a temporary file.
 END="$(date +%s)"
 cat << EOF > "$TEXTFILE_COLLECTOR_DIR/hw-metrics.prom.$$"
+# TYPE cpu_temp gauge
 cpu_temp{cpu="1"} $((90 + RANDOM % 10))
 cpu_temp{cpu="2"} $((90 + RANDOM % 10))
 fan_speed{fan="A"} $((500 + RANDOM % 50))
